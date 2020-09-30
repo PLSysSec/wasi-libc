@@ -60,6 +60,7 @@ __wasi_path_unlink_file
 __wasi_poll_oneoff
 __wasi_proc_exit
 __wasi_random_get
+__wasi_rdtsc
 __wasi_sched_yield
 __wasi_sock_recv
 __wasi_sock_send

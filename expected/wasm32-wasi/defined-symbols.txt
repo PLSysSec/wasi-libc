@@ -178,6 +178,7 @@ __progname
 __progname_full
 __putenv
 __rand48_step
+__rdtsc
 __reallocarray
 __rem_pio2
 __rem_pio2_large

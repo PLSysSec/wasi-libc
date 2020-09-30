@@ -1755,6 +1755,20 @@ __wasi_errno_t __wasi_clflush(
 ));
 
 /**
+  * RDTSC
+  */
+__wasi_errno_t __wasi_rdtsc(
+    /**
+      * Output: the timestamp from rdtsc
+      */
+    uint64_t *tsc
+) __attribute__((
+    __import_module__("wasi_snapshot_preview1"),
+    __import_name__("rdtsc"),
+    __warn_unused_result__
+));
+
+/**
  * Provide file advisory information on a file descriptor.
  * Note: This is similar to `posix_fadvise` in POSIX.
  */
