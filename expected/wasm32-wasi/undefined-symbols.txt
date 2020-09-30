@@ -21,6 +21,7 @@ __trunctfsf2
 __unordtf2
 __wasi_args_get
 __wasi_args_sizes_get
+__wasi_clflush
 __wasi_clock_res_get
 __wasi_clock_time_get
 __wasi_environ_get
@@ -45,6 +46,7 @@ __wasi_fd_seek
 __wasi_fd_sync
 __wasi_fd_tell
 __wasi_fd_write
+__wasi_fence
 __wasi_path_create_directory
 __wasi_path_filestat_get
 __wasi_path_filestat_set_times

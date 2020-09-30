@@ -1731,6 +1731,30 @@ __wasi_errno_t __wasi_clock_time_get(
 ));
 
 /**
+  * Memory and speculation fence
+  */
+__wasi_errno_t __wasi_fence(
+) __attribute__((
+    __import_module__("wasi_snapshot_preview1"),
+    __import_name__("fence"),
+    __warn_unused_result__
+));
+
+/**
+  * Cacheline flush
+  */
+__wasi_errno_t __wasi_clflush(
+    /**
+      * Flush the cacheline containing this address
+      */
+    const void* addr
+) __attribute__((
+    __import_module__("wasi_snapshot_preview1"),
+    __import_name__("clflush"),
+    __warn_unused_result__
+));
+
+/**
  * Provide file advisory information on a file descriptor.
  * Note: This is similar to `posix_fadvise` in POSIX.
  */
