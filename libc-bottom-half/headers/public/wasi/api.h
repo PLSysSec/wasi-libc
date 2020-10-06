@@ -1769,6 +1769,21 @@ __wasi_errno_t __wasi_rdtsc(
 ));
 
 /**
+  * Get a (host) pointer to the host stack - the one that contains actual
+  * return addresses.  This simulates the ability to leak a host stack pointer.
+  */
+__wasi_errno_t __wasi_get_host_stack_ptr(
+    /**
+      * Output: a host stack pointer
+      */
+    void *ptr
+) __attribute__((
+    __import_module__("wasi_snapshot_preview1"),
+    __import_name__("get_host_stack_ptr"),
+    __warn_unused_result__
+));
+
+/**
  * Provide file advisory information on a file descriptor.
  * Note: This is similar to `posix_fadvise` in POSIX.
  */

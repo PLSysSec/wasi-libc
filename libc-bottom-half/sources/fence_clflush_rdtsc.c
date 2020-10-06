@@ -14,3 +14,9 @@ uint64_t __rdtsc() {
    (void)__wasi_rdtsc(&out);
    return out;
 }
+
+void* __get_host_stack_ptr() {
+  void *out;
+  (void)__wasi_get_host_stack_ptr(&out);
+  return out;
+}
