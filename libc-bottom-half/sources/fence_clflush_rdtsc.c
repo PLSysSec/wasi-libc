@@ -5,8 +5,12 @@ __wasi_errno_t __fence() {
   return __wasi_fence();
 }
 
-__wasi_errno_t __clflush(void* addr) {
-  return __wasi_clflush(addr);
+__wasi_errno_t __clflush_guestaddr(const void* addr) {
+  return __wasi_clflush_guestaddr(addr);
+}
+
+__wasi_errno_t __clflush_hostaddr(uint64_t addr) {
+  return __wasi_clflush_hostaddr(addr);
 }
 
 uint64_t __rdtsc() {

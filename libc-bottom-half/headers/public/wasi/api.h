@@ -1741,16 +1741,31 @@ __wasi_errno_t __wasi_fence(
 ));
 
 /**
-  * Cacheline flush
+  * Cacheline flush (guest)
   */
-__wasi_errno_t __wasi_clflush(
+__wasi_errno_t __wasi_clflush_guestaddr(
     /**
-      * Flush the cacheline containing this address
+      * Flush the cacheline containing this (guest) address,
+      * i.e. linear memory index
       */
     const void* addr
 ) __attribute__((
     __import_module__("wasi_snapshot_preview1"),
-    __import_name__("clflush"),
+    __import_name__("clflush_guestaddr"),
+    __warn_unused_result__
+));
+
+/**
+  * Cacheline flush (host)
+  */
+__wasi_errno_t __wasi_clflush_hostaddr(
+    /**
+      * Flush the cacheline containing this (host) address
+      */
+    uint64_t addr
+) __attribute__((
+    __import_module__("wasi_snapshot_preview1"),
+    __import_name__("clflush_hostaddr"),
     __warn_unused_result__
 ));
 

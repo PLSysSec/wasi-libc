@@ -16,7 +16,8 @@ __assert_fail
 __c_dot_utf8
 __c_dot_utf8_locale
 __c_locale
-__clflush
+__clflush_guestaddr
+__clflush_hostaddr
 __clock_gettime
 __cos
 __cosdf
